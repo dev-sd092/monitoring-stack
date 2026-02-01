@@ -1,4 +1,4 @@
-## Monitoring & Logging Stack using Prometheus, Grafana, and Loki
+# Monitoring & Logging Stack using Prometheus, Grafana, and Loki
 
 This project demonstrates a complete **local monitoring and logging setup** for a containerized application using **Prometheus for metrics**, **Loki for centralized logging**, and **Grafana for visualization**.
 
@@ -8,20 +8,7 @@ The goal of this project is to understand how application health is monitored in
 
 ## Architecture Diagram
 
-User Requests
-|
-v
-Node.js Application (Docker)
-├── Exposes Metrics (/metrics)
-├── Writes Application Logs
-|
-├── Metrics → Prometheus
-└── Logs → Promtail → Loki
-|
-v
-Grafana
-(Metrics Dashboards + Logs)
-
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/f78d8997-ccba-40b3-8adf-d5102b72cd72" />
 
 ---
 
@@ -104,19 +91,19 @@ Configured Loki to use an **in-memory KV store** (`ring.kvstore.store: inmemory`
 ## Screenshots
 
 1. **Docker Compose Services Running**
-   - Output of `docker compose ps`
+   - <img width="1227" height="127" alt="image" src="https://github.com/user-attachments/assets/1475cb20-65f6-4b9b-9b85-449b6a255cd1" />
 
 2. **Prometheus Targets Page**
-   - Showing application target in `UP` state
+   - <img width="1912" height="334" alt="Screenshot 2026-02-01 115616" src="https://github.com/user-attachments/assets/a50615ae-e715-44f8-88ae-d69b3d6308d2" />
 
 3. **Grafana Prometheus Dashboard**
-   - Metrics such as total HTTP requests and request rate
+   - <img width="1179" height="802" alt="Screenshot 2026-02-01 120458" src="https://github.com/user-attachments/assets/ad831794-1ace-4834-9585-4b7c3721d7b1" />
 
 4. **Grafana Loki Logs View**
-   - Log query `{job="node-app"}` showing application logs
+   - <img width="1177" height="788" alt="Screenshot 2026-02-01 120523" src="https://github.com/user-attachments/assets/1e4ba1d0-a2ee-4153-abac-bfcdd93b50a3" />
 
 5. **Combined Grafana Dashboard**
-   - Metrics panels + Logs panel together
+   - <img width="1559" height="829" alt="Screenshot 2026-02-01 120426" src="https://github.com/user-attachments/assets/56237a83-1423-4eab-93a3-5a234e56ecfa" />
 
 ---
 
@@ -128,6 +115,6 @@ To stop and remove all running containers and volumes:
 
 ---
 
-##Conclusion
+## Conclusion
 
 This project provides hands-on experience with application observability by implementing both monitoring and logging using industry-standard tools. It simulates real-world scenarios where DevOps engineers monitor system health, investigate issues, and correlate metrics with logs to reduce downtime and improve reliability.
