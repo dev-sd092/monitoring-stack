@@ -1,0 +1,13 @@
+{
+  "name": "monitoring-app",
+  "version": "1.0.0",
+  "description": "Node.js app with Prometheus metrics and Loki logs",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "prom-client": "^14.1.1"
+  }
+}
